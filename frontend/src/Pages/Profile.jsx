@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import Loader from '../components/Loader/Loader'
 import { CurrentUser } from '../Redux/Slices/UserSlice'
 import { useStepContext } from '@mui/material'
+import AddressPage from './AddressPage'
 
 const Profile = () => {
   const navigate = useNavigate()
@@ -46,7 +47,7 @@ const Profile = () => {
 
   return (
     <>
-      <section className=" relative w-[100%] lg:flex gap-2 lg:min-h-[100vh] md:gap-8 px-8 pt-20 pb-8 lg:py-24">
+      <section className=" relative w-[100%] flex-col lg:flex gap-2 lg:min-h-[100vh] md:gap-8 px-8 pt-20 pb-8 lg:py-24">
         <div className=" border w-[100%] lg:w-[100%] md:w-[100%] shadow-lg ">
           <div className="card  hover:shadow-none relative justify-center flex flex-col mx-auto ">
             <h1 className="text-center underline lg:mr-0 pt-5 text-3xl font-semibold">
@@ -90,6 +91,9 @@ const Profile = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className=" border w-[100%] lg:w-[100%] md:w-[100%] shadow-lg ">
+          <AddressPage />
         </div>
       </section>
     </>

@@ -1,121 +1,7 @@
 import Order from "../models/order.model.js"
-import OrderItem from "../models/orderItem.model.js"
-import Product from "../models/product.model.js"
-import User from "../models/user.model.js"
 
-// export const OrderListController = async (req, res) => {
 
-// 	const orders = await Order.find().populate("userId", "username")
-
-// 	if (!orders) {
-// 		return res.status(402).json({
-// 			success: false,
-// 			message: "Orders is not found"
-// 		})
-
-// 	}
-// 	return res.status(200).json({
-// 		success: true,
-// 		orders
-
-// 	})
-
-// }
-
-// export const OrderController = async (req, res) => {
-
-// 	const orderItemsIds = req.body.orderItems.map(async (orderItem) => {
-// 		let newOrderItem = new OrderItem({
-// 			quantity: orderItem.quantity,
-// 			product: orderItem.product
-// 		})
-// 		newOrderItem = await newOrderItem.save()
-// 		return newOrderItem._id
-// 	}
-// 	)
-
-// 	// const orserItemsData = await orderItemsIds
-// 	// console.log(orserItemsData);
-
-// 	// const {
-// 	// 	userId,
-// 	// 	orderItems,
-// 	// 	firstname,
-// 	// 	lastname,
-// 	// 	phone,
-// 	// 	country,
-// 	// 	city,
-// 	// 	state,
-// 	// 	street,
-// 	// 	address,
-// 	// 	pincode, } = req.body
-
-// 	const order = await Order({
-// 		// orderItems: orserItemsData,
-// 		orderItems: orderItemsIds,
-// 		userId: req.body.userId,
-// 		firstname: req.body.firstname,
-// 		lastname: req.body.lastname,
-// 		phone: req.body.phone,
-// 		country: req.body.country,
-// 		city: req.body.city,
-// 		state: req.body.state,
-// 		street: req.body.street,
-// 		address: req.body.address,
-// 		pincode: req.body.pincode,
-// 		totalPrice: req.body.totalPrice
-
-// 	})
-// 	const orderdata = await order.save()
-// 	if (!order) {
-// 		return res.status(402).json({
-// 			success: false,
-// 			message: "Order is not created"
-// 		})
-// 	}
-
-// 	return res.status(402).json({
-// 		success: true,
-// 		message: "Order created successfully",
-// 		order
-// 		// order: orderdata
-// 	})
-
-// }
-
-// export const OrderByIdController = async (req, res) => {
-
-// 	try {
-// 		const order = await Order.findById(req.params.id)
-// 			.populate("userId", "username")
-// 			.populate({ path: "orderItems", populate: 'product' })
-// 		// .populate("orderItems")
-// 		console.log(order);
-// 		if (!order) {
-// 			return res.status(402).json({
-// 				success: false,
-// 				message: "Order is not found"
-// 			})
-
-// 		}
-// 		return res.status(200).json({
-// 			success: true,
-// 			order
-
-// 		})
-// 	} catch (error) {
-// 		return res.status(200).json({
-// 			success: false,
-// 			message: "Something wrong with getting order data",
-// 			error
-
-// 		})
-
-// 	}
-
-// }
-
-// {
+// address 
 // 	"shippingInfo": {
 // 		"firstname":"raj",
 // 		"lastname":"singh",
@@ -125,24 +11,8 @@ import User from "../models/user.model.js"
 // 		"city": "delhi",
 // 		"zipcode": 262622,
 // 		"phone": 1234567890,
-// 	},
-// 		"orderItems": {
-// 			"product":"65ebff958200f3819056843a",
-// 			"name":"Shirt",
-// 			"price":"66",
-// 			"quantity":1,
-// 			"image":"https://m.media-amazon.com/images/I/71c-JkNMe1L._AC_SX385_.jpg",
-// 		},
-// 			"paymentInfo": {
-// 				"id":"sample paymentInfo",
-// 			"status":"succeeded"
-// 			},
-// 				"itemsPrice": 66,
-// 					"taxPrice": 18,
-// 						"shippingPrice": 100,
-// 							"totalPrice":184 
+// 	}
 
-// }
 
 // get all orders
 

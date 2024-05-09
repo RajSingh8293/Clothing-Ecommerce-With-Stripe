@@ -37,10 +37,7 @@ export const CurrentUser = createAsyncThunk('user/current-user', async () => {
     console.log(data)
     return data
   } catch (error) {
-    console.error(error.response.data)
-    toast.error(
-      error.response && error.response.data && error.response.data.message,
-    )
+    console.error(error)
   }
 })
 

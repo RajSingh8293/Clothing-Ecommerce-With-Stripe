@@ -82,8 +82,8 @@ export default function Header() {
 
   return (
     <>
-      <section className="bg-gray-800 top-0 right-0 z-20 fixed w-[100%] px-8">
-        <div className="relative flex items-center  justify-between w-[100%]  py-3 lg:py-0">
+      <section className="bg-gray-800 top-0 right-0 lg:py-0 py-2 z-30 fixed w-[100%] px-5 lg:px-8 md:px-8 ">
+        <div className="relative flex items-center   justify-between w-[100%]">
           {/* logo  */}
           <div className="logo px-3 roundend-full  font-semibold  bg-blue-400  items-center">
             <NavLink to="/">

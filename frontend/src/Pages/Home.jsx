@@ -42,12 +42,16 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <Hero />
+    <div className="lg:pt-[70px] pt-[55px]">
+      <div>
+        <Hero />
+      </div>
       <Category getCategoryData={categoryData} />
       <Products products={products?.slice(0, 4)} title="Our Collections" />
       <NewsLetter />
-      <Offers />
+      <div className="lg:px-8 px-5">
+        <Offers />
+      </div>
       <Products products={womenFilterData} title="Women Items" />
     </div>
   )

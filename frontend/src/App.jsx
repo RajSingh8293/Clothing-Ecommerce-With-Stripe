@@ -42,11 +42,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import UpdateUserDetails from './Pages/UpdateUserDetails'
 import { CurrentUser } from './Redux/Slices/UserSlice'
 import Unauthorized from './Pages/Unauthorized'
+import ContactPage from './Pages/ContactPage'
 
 function App() {
   const dispatch = useDispatch()
   const token = JSON.parse(localStorage.getItem('token'))
-  // const secretKey = import.meta.env.REACT_APP_API_BASE_UR
   const { isAuthenticated, userdata } = useSelector((state) => state.userdata)
   useEffect(() => {
     dispatch(CurrentUser())
@@ -56,7 +56,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <ToastContainer autoClose="2000" position="top-center" />
-        {/* <ToastContainer /> */}
         <Routes>
           {/* shop  */}
           <Route
@@ -66,9 +65,6 @@ function App() {
                 stripe={loadStripe(
                   `${import.meta.env.VITE_REACT_APP_SECRET_STRIPE_KEY}`,
                 )}
-                // stripe={loadStripe(
-                //   'pk_test_51OXJ6hSI4MtLjJYXrmXXo6DpuzsLuV5WgT4Fe0vEWSoeQFHDT09iVaNHyM6BbTapOmHhDZevdWeETxMuOgk16EZf00xYwI9Atp',
-                // )}
               >
                 <Payment />
               </Elements>
@@ -80,6 +76,7 @@ function App() {
           <Route path="/product-details/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/unauthorized" element={<Unauthorized />} />
+          <Route path="/contact" element={<ContactPage />} />
 
           {/* auth  */}
           <Route path="/signup" element={<Signup />} />

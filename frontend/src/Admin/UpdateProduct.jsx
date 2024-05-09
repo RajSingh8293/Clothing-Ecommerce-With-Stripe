@@ -33,7 +33,12 @@ const UpdateProduct = () => {
   const getProductById = async () => {
     const { data } = await axios.get(
       `http://localhost:3434/api/v1/products/${id}`,
-      axiosConfig,
+      {
+        axiosConfig,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
     )
     setName(data.product.name)
     setTitle(data.product.title)
@@ -58,6 +63,7 @@ const UpdateProduct = () => {
     description,
     featured,
   }
+
   const updateHandler = async (e) => {
     e.preventDefault()
 
@@ -67,6 +73,7 @@ const UpdateProduct = () => {
         method: 'PUT',
         credentials: 'include',
         headers: {
+          Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(updateData),

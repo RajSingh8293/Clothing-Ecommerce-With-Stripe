@@ -3,9 +3,9 @@ import React from 'react'
 const Offers = () => {
   return (
     <section className="flex justify-center">
-      <div className="py-24 px-10 flex justify-center flex-col text-center">
+      <div className="lg:py-24 py-16 flex justify-center flex-col text-center">
         <div>
-          <h1 className="font-bold text-5xl">
+          <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl sm:text-4xl">
             Get 25% off during our one-time sale
           </h1>
           <p className="text-gray-600 text-xl py-5">

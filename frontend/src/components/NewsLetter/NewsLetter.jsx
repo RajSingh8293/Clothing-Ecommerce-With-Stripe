@@ -2,10 +2,10 @@ import image from '../../assets/Images/e-com-png-removebg-preview.png'
 
 const NewsLetter = () => {
   return (
-    <div className="px-10 relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
-      <div className="flex  justify-between items-center">
-        <div className="w-[50%]">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+    <div className="lg:px-8 md:px-8 px-5 relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+      <div className="lg:flex lg:justify-between items-center">
+        <div className="lg:w-[50%]">
+          <h2 className="lg:text-3xl text-2xl font-bold tracking-tight text-white sm:text-3xl">
             Subscribe to our newsletter.
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-300">
@@ -13,8 +13,8 @@ const NewsLetter = () => {
             velit quis. Duis tempor incididunt dolore.
           </p>
         </div>
-        <div className="mt-6 flex w-[40%] gap-x-4 ">
-          <div className="flex gap-3 w-[100%]">
+        <div className="mt-6 flex  lg:w-[40%] w-[100%] ">
+          <div className="flex items-center flex-col lg:flex-row md:flex-row sm:flex-row gap-3 w-[100%]  lg:w-[100%] md:w-[100%] sm:w-[100%]">
             <label htmlFor="email-address" className="sr-only">
               Email address
             </label>
@@ -22,12 +22,12 @@ const NewsLetter = () => {
               name="email"
               type="email"
               required
-              className="w-[100%] rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+              className=" lg:w-[100%] md:w-[80%] sm:w-[80%] w-[100%] rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
               placeholder="Enter your email"
             />
             <button
               type="submit"
-              className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              className=" lg:mt-0 md:mt-0 sm:mt-0  mt-0 flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
               Subscribe
             </button>

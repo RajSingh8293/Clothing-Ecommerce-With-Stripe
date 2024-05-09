@@ -154,19 +154,20 @@ const Dashboard = () => {
   }, [dispatch])
   return (
     <section className="flex py-16 w-[100%]">
-      <div className="lg:w-[20%] ">
+      <div className="lg:w-[20%] hidden lg:block">
         <Sidebar />
       </div>
-      <div className="lg:w-[80%] w-[100%] flex justify-center py-12 px-12 lg:py-12 overflow-x-auto ">
-        <div className="w-[100%]  ">
-          <div className="lg:flex lg:justify-between gap-5 flex flex-wrap">
-            <div className="bg-blue-400 py-8 px-12 flex flex-col gap-2">
+      <div className="lg:w-[80%] w-[100%] py-12 px-5 lg:px-8 lg:py-12 overflow-x-auto ">
+        <div className=" ">
+          <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 ">
+            {/* <div className="lg:flex lg:justify-between gap-5 flex flex-wrap"> */}
+            <div className=" bg-blue-400 py-8 px-12 flex flex-col gap-2">
               <span className="text-bold">Total Sales</span>
               <span className="text-bold text-2xl">
                 $ {totalSales && totalSales}
               </span>
             </div>
-            <div className="bg-blue-400 ">
+            <div className=" bg-blue-400 ">
               <NavLink
                 className="py-8 px-12 flex flex-col gap-2"
                 to="/dashboard-products"
@@ -177,7 +178,7 @@ const Dashboard = () => {
                 </span>
               </NavLink>
             </div>
-            <div className="bg-blue-400 ">
+            <div className=" bg-blue-400 ">
               <NavLink
                 className="py-8 px-12 flex flex-col gap-2"
                 to="/dashboard-orders"
@@ -189,7 +190,7 @@ const Dashboard = () => {
                 </span>
               </NavLink>
             </div>
-            <div className="bg-blue-400 ">
+            <div className=" bg-blue-400 ">
               <NavLink
                 className="py-8 px-12 flex flex-col gap-2"
                 to="/dashboard-users"
@@ -201,8 +202,9 @@ const Dashboard = () => {
               </NavLink>
             </div>
           </div>
-
-          <div className="px-8 py-12 lg:flex lg:py-12 lg:justify-between gap-8 lg:items-center">
+        </div>
+        <div className="overflow-x-auto">
+          <div className="py-12 lg:flex flex-col lg:py-12 lg:justify-between gap-8 lg:items-center">
             <div className="">
               <PieChart
                 series={[
