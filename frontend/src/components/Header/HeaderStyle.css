@@ -1,0 +1,47 @@
+@media (max-width: 780px) {
+  #navBar {
+    display: none;
+  }
+  .menuBar {
+    display: block;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo {
+    display: block;
+  }
+}
+
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+}
+.nav-links .links {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.toggleNav ul {
+  width: 300px;
+}
+
+.toggleNav ul a {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.toggleNav.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: absolute;
+}
+
+.toggleNav ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}

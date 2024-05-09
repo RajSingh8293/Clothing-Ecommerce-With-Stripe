@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.address {
+  font-weight: 600;
+  display: flex;
+  gap: 20px;
+}
+.address span {
+  color: #181717;
+  font-weight: 400;
+}
+/* .payment_card div {
+  height: 40px;
+} */
+.paymentDiv {
+  border: 1px solid #424242;
+  display: flex;
+  align-items: center;
+  margin: 2vmax 0;
+}
+.paymentDiv > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 2.6vmax;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.paymentDiv .paymentInput {
+  width: 100%;
+  padding: 5px 0;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px;
+  padding: 1vmax 5vmax;
+  padding-right: 1vmax;
+}
